@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Recipe - Plan&Plate</title>
+    <script src="auth.js" defer></script>
+    <link href="styles.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="flex flex-col min-h-screen">
+    <!-- Header -->
+    <header class="py-4 shadow-md" style="background-color: #ffffff; color: rgb(53, 51, 51);">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <img src="assets/images/logo.png" alt="Plan & Plate Logo - Recipe Sharing and Meal Planning Platform" class="h-16">
+
+            <!-- Navigation -->
+            <nav class="flex-grow">
+                <ul class="flex justify-center space-x-8 text-lg font-medium">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="relative group">
+                        <a href="recipes.html" class="nav-link nav-link-with-dropdown">
+                            Recipes
+                            <span class="dropdown-indicator"></span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <ul>
+                                <li><a href="recipes.html" class="dropdown-link">All Recipes</a></li>
+                                <li><a href="recipes-creator.html" class="dropdown-link" data-restricted="true">Add New Recipe</a></li>
+                            </ul>
+                        </div>
+                    </li>                    
+                    <li><a href="meal-planning.html" class="nav-link" data-restricted="true">Meal Planner</a></li>
+                    <li><a href="shopping-list.html" class="nav-link" data-restricted="true">Shopping List</a></li>
+                    <li><a href="saved.html" class="nav-link" data-restricted="true">Saved</a></li>
+                </ul>
+            </nav>
+
+            <!-- Login and Register Button -->
+            <div class="auth-buttons">
+                <a href="login.html" class="btn login-btn">Login</a>
+                <a href="register.html" class="btn register-btn">Sign Up</a>
+            </div>
+            <!-- User navigation -->
+            <nav class="user-navigation hidden  flex justify-center space-x-8 text-lg font-medium">
+                <ul class="flex justify-center space-x-8 text-lg font-medium">
+                    <li><p></p></li>
+
+                    <li class="relative group">
+                        <a href="#" class="nav-link nav-link-with-dropdown">
+                            <img id='userProfilePic' src="./assets/images/guy_profile.jpeg" alt="User" class="h-8 w-8 rounded-full">
+                            <span class="dropdown-indicator"></span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <ul>
+                                <li><a href="profile.html" class="dropdown-link">My Profile</a></li>
+                                <li><a href="#" id="logout-btn" class="dropdown-link">Log Out</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+            </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow container mx-auto py-8">
+        <section class="profile-section max-w-xl mx-auto">
+            <div class="profile-header flex items-center space-x-4 mb-6">
+                <img id="profile-picture" class="w-16 h-16 rounded-full" src="./assets/images/defaultprofile.jpg" alt="User Profile Picture">
+                <div class="flex items-center justify-between w-full">
+                    <h1 id="profile-name" class="text-2xl font-semibold">User Name</h1>
+                    <button class="btn settings-btn">Settings</button>
+                </div>
+            </div>
+
+            <hr class="my-4">
+
+            <div class="user-recipes">
+                <h2 class="text-lg font-semibold mb-4">Your Recipes</h2>
+                <div class="recipe-placeholder p-4 border border-dashed border-gray-300 rounded-lg text-center">
+                    <p class="text-gray-500">Here will be your recipes. Start adding your delicious creations!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-4" style="background-color: #494848; color: white;">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Plan & Plate. All rights reserved.</p>
+            <p><a href="about.html" class="hover:underline" style="color: #fff;">About Us</a> | <a href="contact.html" class="hover:underline" style="color: #fff;">Contact</a></p>
+        </div>
+    </footer>
+</body>
+</html>
