@@ -21,7 +21,7 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <header className="py-4 shadow-md w-full bg-white dark:bg-gray-900">
+    <header className="py-4 shadow-md w-full bg-white">
       <div className="container mx-auto px-4">
         {/* Mobile and Tablet View (up to 1023px) */}
         <div className="lg:hidden flex items-center justify-between w-full relative">
